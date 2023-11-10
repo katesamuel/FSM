@@ -16,8 +16,8 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
   }
 
   async validate(payload: JwtPayload): Promise<User> {
-    const { phoneNo } = payload;
-    const user: User = await this.userTask.getCachedUserDetail(phoneNo);
+    const { phoneCode, mobile } = payload;
+    const user: User = await this.userTask.getCachedUserDetail(phoneCode, mobile);
     if (!user) {
       this._logger.error('JwtStrategy: User Not Found!');
       throw new UnauthorizedException();

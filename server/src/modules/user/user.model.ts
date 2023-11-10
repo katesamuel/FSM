@@ -4,11 +4,13 @@ import { UserPermission } from './enum/user-permission.enum';
 import { UserRole } from './enum/user-role.enum';
 
 export interface User extends mongoose.Document {
+  title: any;
   firstName: string;
   lastName: string;
   gender: string;
   email: string;
-  phoneNo: string;
+  phoneCode: string;
+  mobile: string;
   address: string;
   age: number;
   role: string;
@@ -29,7 +31,8 @@ export const UserSchema = new mongoose.Schema(
     gender: { type: String, required: true, enum: UserGender },
     email: { type: String, default: null },
     age: { type: Number, default: null },
-    phoneNo: { type: String, required: true },
+    phoneCode: { type: String, required: true },
+    mobile:  { type: String, required: true },
     address: { type: String, required: true },
     role: { type: String, required: true, enum: UserRole },
     permissions: [{ type: String, required: true, enum: UserPermission }],

@@ -23,7 +23,10 @@ export class UpdateUserDto {
   age: number;
 
   @IsOptional()
-  phoneNo: string;
+  phoneCode: string;
+
+  @IsOptional()
+  mobile: string;
 
   @IsOptional()
   address: string;

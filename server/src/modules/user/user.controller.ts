@@ -36,6 +36,12 @@ export class UserController {
     return await this.userService.getUserById(userId);
   }
 
+  @Permissions(UserPermission.SuperAdmin, UserPermission.Admin)
+  @Get()
+  async getAllUsers(): Promise<IBaseResponse> {
+    return await this.userService.getAllUsers();
+  }
+
   @Put(':id')
   async updateUserById(
     @Param('id') userId: ObjectId,

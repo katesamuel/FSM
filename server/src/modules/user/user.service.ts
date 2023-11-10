@@ -36,6 +36,14 @@ export class UserService {
     }
   }
 
+  async getAllUsers(): Promise<IBaseResponse> {
+    const results = await this.userModel.find();
+    if (results) {
+      return new BaseResponse(HttpStatus.CREATED, 'OK', results);
+    } else {
+      throw new BadRequestException();
+    }
+  }
   async updateUserById(
     userId: ObjectId,
     updateUserDto: UpdateUserDto,
@@ -55,7 +63,7 @@ export class UserService {
   }
 
   async deleteUserCache() {
-    await this.redisClientWrapper.delKey('members');
+    await this.redisClientWrapper.delKey('users');
     return new BaseResponse(HttpStatus.NO_CONTENT, 'OK', '');
   }
 

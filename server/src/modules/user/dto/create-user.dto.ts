@@ -10,6 +10,12 @@ export class CreateUserDto {
   @IsNotEmpty({ message: 'Last Name is required' })
   lastName: string;
 
+  @IsNotEmpty({ message: 'PhoneCode is required' })
+  phoneCode: string;
+
+  @IsNotEmpty({ message: 'mobile is required' })
+  mobile: string;
+
   @IsNotEmpty({ message: 'Gender is required' })
   @IsEnum(UserGender, {
     message: 'Invalid User gender',
@@ -21,9 +27,6 @@ export class CreateUserDto {
 
   @IsOptional()
   age: number;
-
-  @IsOptional()
-  phoneNo: string;
 
   @IsNotEmpty({ message: 'Address is required' })
   address: string;
