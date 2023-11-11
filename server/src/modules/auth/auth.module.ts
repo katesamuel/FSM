@@ -4,13 +4,13 @@ import { PassportModule } from '@nestjs/passport';
 import { JwtModule } from '@nestjs/jwt';
 import { Module } from '@nestjs/common';
 import { JwtStrategy } from './../../shared/jwt/jwt.strategy';
-import { MemberModule } from '../member/member.module';
+import { UserModule } from '../user/user.module';
 import EmailTask from '../../shared/external-notification/email.task';
 import SmsTask from '../../shared/external-notification/sms.task';
 
 @Module({
   imports: [
-    MemberModule,
+    UserModule,
     PassportModule.register({ defaultStrategy: 'jwt' }),
     JwtModule.registerAsync({
       useFactory: () => ({

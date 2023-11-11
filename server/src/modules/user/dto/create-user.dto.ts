@@ -22,11 +22,11 @@ export class CreateUserDto {
   })
   gender: UserGender;
 
-  @IsOptional()
+  @IsNotEmpty({ message: 'email is required' })
   email: string;
 
-  @IsOptional()
-  age: number;
+  @IsNotEmpty({ message: 'dob is required' })
+  dob: string;
 
   @IsNotEmpty({ message: 'Address is required' })
   address: string;

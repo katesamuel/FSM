@@ -12,12 +12,12 @@ export class Bootstraper {
     /** Logging Options **/
     const logOptions: LogOptions = new LogOptions();
     logOptions.directory = process.env.LOG_DIRECTORY || './logs';
-    logOptions.fileName = process.env.LOG_FILE_NAME || 'churchbell-service.log';
+    logOptions.fileName = process.env.LOG_FILE_NAME || 'fsm-service.log';
     logOptions.writeToFile = process.env.LOG_WRITE_TO_FILE === 'true' || false;
     logOptions.level = process.env.LOG_LEVEL || 'debug';
     const app = await NestFactory.create<NestExpressApplication>(AppModule, {
       rawBody: true,
-      logger: new BaseLogger('ChurchBell-Service', logOptions),
+      logger: new BaseLogger('FSM-Service', logOptions),
     });
     app.useBodyParser('text');
     app.useBodyParser('json', { limit: '2mb' });

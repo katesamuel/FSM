@@ -6,6 +6,7 @@ import { RedisModule } from 'src/shared/redis/redis.module';
 import { UserController } from './user.controller';
 import { UserSchema } from './user.model';
 import { UserService } from './user.service';
+import { UserTask } from './user.task';
 
 @Module({
   imports: [
@@ -14,7 +15,7 @@ import { UserService } from './user.service';
     RedisModule,
   ],
   controllers: [UserController],
-  providers: [UserService],
-  exports: [UserService],
+  providers: [UserService, UserTask],
+  exports: [UserService, UserTask],
 })
 export class UserModule {}
