@@ -1,0 +1,22 @@
+.navbar {
+    background-color: transparent;
+    color: white;
+    justify-content: space-between;
+    font-size: x-large;
+    height: initial;
+    align-items: flex-start;
+
+    .logo-brand {
+        width: 250px;
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .nav-item {
+        i {
+            padding: 20px;
+            font-size: large;
+        }
+    }
+}
