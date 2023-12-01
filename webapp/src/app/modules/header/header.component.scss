@@ -1,22 +1,94 @@
 .navbar {
-    background-color: transparent;
-    color: white;
-    justify-content: space-between;
-    font-size: x-large;
-    height: initial;
-    align-items: flex-start;
+  background-color: transparent;
+  color: white;
+  justify-content: space-between;
+  height: initial;
+  align-items: flex-start;
 
-    .logo-brand {
-        width: 250px;
-        img {
-            max-width: 100%;
-        }
+  .logo-brand {
+    
+    /* Max width 767px */
+    @media only screen and (max-width: 767px) {
+        width: 75px;
     }
 
-    .nav-item {
-        i {
-            padding: 20px;
-            font-size: large;
-        }
+    /* Min width 576px to Max width 767px */
+    @media only screen and (min-width: 576px) and (max-width: 767px) {
+        width: 75px;
     }
+
+    /* Min width 768px to Max width 991px */
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+        width: 150px;
+    }
+
+    /* Min width 992px to Max width 1199px */
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        width: 150px;
+    }
+
+    /* Min width 1200px to Max width 1399px */
+    @media only screen and (min-width: 1200px) and (max-width: 1399px) {
+        width: 200px;
+    }
+
+    /* Min width 1400px */
+    @media only screen and (min-width: 1400px) {
+        width: 220px;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .nav-item {
+    :hover {
+        color: #F37121;
+        border-bottom: 1px solid #BA3892;
+    }
+    /* Max width 767px */
+    @media only screen and (max-width: 767px) {
+      i {
+        padding: calc(14px - 1%);
+      }
+      font-size: small;
+    }
+
+    /* Min width 576px to Max width 767px */
+    @media only screen and (min-width: 576px) and (max-width: 767px) {
+      font-size: small;
+    }
+
+    /* Min width 768px to Max width 991px */
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      i {
+        padding: 14px;
+      }
+      font-size: medium;
+    }
+
+    /* Min width 992px to Max width 1199px */
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      i {
+        padding: 16px;
+      }
+      font-size: medium;
+    }
+
+    /* Min width 1200px to Max width 1399px */
+    @media only screen and (min-width: 1200px) and (max-width: 1399px) {
+      i {
+        padding: 18px;
+      }
+      font-size: large;
+    }
+
+    /* Min width 1400px */
+    @media only screen and (min-width: 1400px) {
+      i {
+        padding: 20px;
+      }
+      font-size: large;
+    }
+  }
 }

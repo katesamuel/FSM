@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
     protected modalOpen: boolean = false;
+    public loggedInUser: object | null = null;
     constructor() {}
 
     async searchHandler(e: Event) {}

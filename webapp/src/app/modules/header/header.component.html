@@ -1,8 +1,9 @@
 <mat-toolbar class="navbar">
     <div class="logo-brand"><img src="assets/images/logo/logo-primary.png" alt="logo-primary"></div>
     <div class="nav-item">
-        <i class="fa-regular fa-user" routerLink="login"></i>
-        <i class="fa-solid fa-bag-shopping" routerLink="checkout"></i>
+        <i *ngIf="!loggedInUser" class="fa-regular fa-user" routerLink="auth"></i>
+        <i *ngIf="loggedInUser" class="fa-solid fa-user" routerLink="dashboard"></i>
+        <i class="fa-solid fa-basket-shopping" routerLink="checkout"></i>
         <i class="fa-solid fa-magnifying-glass" (click)="searchHandler($event)"></i>
         <i class="fa-solid fa-equals" *ngIf="!modalOpen" (click)="openNavModal()" ></i>
         <i class="fa-solid fa-xmark" *ngIf="modalOpen" (click)="closeNavModal()"></i>

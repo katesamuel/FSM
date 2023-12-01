@@ -14,19 +14,30 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { AuthenticationModule } from './modules/authentication/authentication.module';
 import { EventsModule } from './modules/events/events.module';
+import { BasketComponent } from './modules/basket/basket.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
-  }, {
-    path: 'login',
-    component: AuthenticationModule
-  }, {
+    component: HomeComponent,
+  },
+  {
+    path: 'auth',
+    loadChildren: () =>
+      import('./modules/authentication/authentication.module').then(
+        (m) => m.AuthenticationModule
+      ),
+  },
+  {
+    path: 'basket',
+    component: BasketComponent,
+  },
+  {
     path: 'events',
-    component: EventsModule
-
-  }
+    loadChildren: () =>
+      import('./modules/events/events.module').then((m) => m.EventsModule),
+    // canActivate: [AuthGuard]
+  },
 ];
 
 @NgModule({
@@ -34,21 +45,22 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    BasketComponent,
   ],
   imports: [
     BrowserModule,
     NgxScrollTopModule,
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,
-    MatIconModule, 
-    MatButtonModule, 
-    MatButtonToggleModule, 
-    MatProgressSpinnerModule, 
-    MatToolbarModule
+    MatIconModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatProgressSpinnerModule,
+    MatToolbarModule,
   ],
   exports: [RouterModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

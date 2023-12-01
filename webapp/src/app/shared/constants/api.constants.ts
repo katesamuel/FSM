@@ -3,7 +3,8 @@ export class ApiRouteConstants {
   public static API_BASE_PATH = 'internal-api';
 
   public static AUTHENTICATION = {
-
+    LOGIN_CHECK: `${this.API_BASE_PATH}/auth/login-check`,
+    OTP_CHECK: `${this.API_BASE_PATH}/auth/otp-check`
   }
 
   public static USERS = {
