@@ -16,6 +16,6 @@ export class AppConstants {
       landline: '',
     },
     email: 'faithschoolofmusic1@gmail.com',
-    address: '',
+    address: 'No. 119, Ground floor, Second Cross STreet, Krishna Colony, Trichy Road, Singanallur, Coimbatore - 641005, India',
   };
 }

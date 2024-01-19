@@ -1,0 +1,15 @@
+.backdrop {
+    height: 100vh;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 62% 10%;
+  }
+}
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+
+  
+}

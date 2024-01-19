@@ -7,14 +7,9 @@ import { HeaderComponent } from './modules/header/header.component';
 import { FooterComponent } from './modules/footer/footer.component';
 import { NgxScrollTopModule } from 'ngx-scrolltop';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { AuthenticationModule } from './modules/authentication/authentication.module';
-import { EventsModule } from './modules/events/events.module';
 import { BasketComponent } from './modules/basket/basket.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 const routes: Routes = [
   {
@@ -26,6 +21,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/authentication/authentication.module').then(
         (m) => m.AuthenticationModule
+      ),
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () =>
+      import('./modules/dashboard/dashboard.module').then(
+        (m) => m.DashboardModule
       ),
   },
   {
@@ -53,11 +55,7 @@ const routes: Routes = [
     NgxScrollTopModule,
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,
-    MatIconModule,
-    MatButtonModule,
-    MatButtonToggleModule,
-    MatProgressSpinnerModule,
-    MatToolbarModule,
+    NgbModule,
   ],
   exports: [RouterModule],
   providers: [],

@@ -1,11 +1,14 @@
-<mat-toolbar class="navbar">
-    <div class="logo-brand"><img src="assets/images/logo/logo-primary.png" alt="logo-primary"></div>
-    <div class="nav-item">
-        <i *ngIf="!loggedInUser" class="fa-regular fa-user" routerLink="auth"></i>
-        <i *ngIf="loggedInUser" class="fa-solid fa-user" routerLink="dashboard"></i>
-        <i class="fa-solid fa-basket-shopping" routerLink="checkout"></i>
-        <i class="fa-solid fa-magnifying-glass" (click)="searchHandler($event)"></i>
-        <i class="fa-solid fa-equals" *ngIf="!modalOpen" (click)="openNavModal()" ></i>
-        <i class="fa-solid fa-xmark" *ngIf="modalOpen" (click)="closeNavModal()"></i>
+<nav class="navbar block--black padded--content">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink="">
+            <img src="assets/images/logo/logo-primary.png" alt="logo-primary">
+        </a>
+        <ul class="navbar-nav">
+            <li class="nav-item fa-regular fa-user" *ngIf="!loggedInUser" routerLink="auth" routerLinkActive="active-link"></li>
+            <li class="nav-item fa-regular fa-user" *ngIf="loggedInUser" routerLink="dashboard" routerLinkActive="active-link"></li>
+            <li class="nav-item fa-solid fa-basket-shopping" routerLink="basket" routerLinkActive="active-link"></li>
+            <li class="nav-item fa-solid fa-magnifying-glass" (click)="searchHandler($event)"></li>
+            <li class="nav-item fa-solid fa-equals" (click)="openNavModal()"></li>
+        </ul>
     </div>
-</mat-toolbar>
+</nav>
