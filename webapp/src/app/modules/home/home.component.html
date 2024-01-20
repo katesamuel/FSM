@@ -5,25 +5,26 @@
   />
 </div>
 
+<div class="block--white padded--content plato">
+  <p>
+    “Music is a moral law. It gives a soul to the universe, wings to the mind,
+    flight to imagination, a charm to sadness, gaiety and life to everything. It
+    is the essence of order, and leads to all that is good and just and
+    beautiful.”
+  </p>
+  <p><span>- Plato</span></p>
+</div>
+
 <div class="block--pink--n--orange padded--content home">
-    <div class="container-fluid">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-    </div>
+  <div class="violinist">
+    <img
+      src="../../../assets/images/home/other/violinist.png"
+      class="d-block w-100"
+    />
+  </div>
+  <div class="music-is">
+    <span>what does music mean to you?</span>
+  </div>
 </div>
 
 <div class="block--white padded--content">
@@ -37,41 +38,88 @@
   </p>
 </div>
 
-<div class="block--black padded--content">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+<div class="block--white padded--content">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
 </div>
 
 <div class="block--white padded--content">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
 </div>
 
-<div class="block--pink--n--orange padded--content">
-    <div class="container-fluid">
-    
+<div class="block--white">
+  <div class="marquee-container">
+    <div *ngFor="let image of images" class="marquee-item">
+      <img [src]="image" alt="Image" />
     </div>
   </div>
+</div>
 
-  <div class="block--white padded--content">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+<div class="block--white padded--content">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+</div>
+<div class="block--black padded--content">
+  <div class="school-guide-container">
+    <div class="image-container">
+      <img src="../../../assets/images/home/other/ethan-piano.jpg" />
+    </div>
+    <div class="text-container">
+      <span class="heading">{{ "school guide " + academicYear }}</span>
+      <span class="text">Discover all you need to know about our community and how you can
+        become a part of it.</span>
+      <a>
+        <span> download the school guide </span>
+        <i class="fa-solid fa-arrow-down-long"></i>
+      </a>
+    </div>
   </div>
+</div>
+<div class="block--pink--n--orange padded--content">
+    <div class="events-container">
+      <div class="text-container">
+        <span class="heading">{{ "Concerts and recitals " + academicYear }}</span>
+        <span class="text">There are regular recitals, concerts with affiliated ensembles, workshops and much more happening all through the year, with a regular repertoire ranging from baroque to modern and contemporary, sometimes pop and rock.</span>
+        <a>
+          <span> view the events diary </span>
+          <i class="fa-solid fa-angles-right"></i>
+        </a>
+        <a>
+            <span> book tickets </span>
+            <i class="fa-solid fa-angles-right"></i>
+        </a>
+      </div>
+      <div class="image-container">
+        <img src="../../../assets/images/home/other/concert.jpg" />
+      </div>
+    </div>
+  </div>
+<div class="block--white padded--content">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+</div>
