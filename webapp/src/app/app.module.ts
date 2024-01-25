@@ -40,6 +40,11 @@ const routes: Routes = [
       import('./modules/events/events.module').then((m) => m.EventsModule),
     // canActivate: [AuthGuard]
   },
+  {
+    path: 'search',
+    loadChildren: () =>
+      import('./modules/search/search.module').then((m) => m.SearchModule),
+  }
 ];
 
 @NgModule({

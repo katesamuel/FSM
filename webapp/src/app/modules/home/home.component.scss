@@ -71,7 +71,13 @@
 
 .marquee-item {
   flex-shrink: 0;
-  animation: marquee 56s linear infinite;
+  animation: marquee 240s linear infinite;
+
+  img {
+    width: auto;
+    overflow: hidden;
+    padding-left: 99vw;
+  }
 }
 
 @keyframes marquee {
@@ -90,14 +96,16 @@
   padding: 60px 0px;
 
   .image-container {
+    width: 70%;
     img {
-      width: 32vw;
+        width: 100%;
     }
   }
 
   .text-container {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
     padding: 20px 40px 20px 40px;

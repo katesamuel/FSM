@@ -1,67 +1,74 @@
-
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
 /* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
+@import "bootstrap/scss/bootstrap";
 
 /* You can add global styles to this file, and also import other style files */
-  body {
-    font-family: "Museo Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 300;
-    font-size: 1rem;
-    line-height: 1.375rem;
+body {
+  font-family: "Museo Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.375rem;
 
-    .block--black {
-      background-color: black;
-      color: white;
-    }
-
-    .block--white {
-      background-color: white;
-      color: black;
-    }
-
-    .block--pink--n--orange {
-      background-color: orangered;
-      background-image: linear-gradient(to bottom, rgb(100, 0, 100), rgb(175, 15, 0));
-      // background-image: linear-gradient(to bottom, #BB3891, #F37121);
-      color: white;
-    }
-
-    .border--block {
-      border-top: 0.1px solid gray;
-  }
+  .offcanvas {
+    height: fit-content !important;
+    overflow: hidden;
   }
 
-  .padded--content {
-    /* Max width 767px */
-    @media only screen and (max-width: 767px) {
-      padding: 5px;
-    }
-
-    /* Min width 576px to Max width 767px */
-    @media only screen and (min-width: 576px) and (max-width: 767px) {
-      padding: 10px;
-    }
-
-    /* Min width 768px to Max width 991px */
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
-      padding: 15px;
-    }
-
-    /* Min width 992px to Max width 1199px */
-    @media only screen and (min-width: 992px) and (max-width: 1199px) {
-      padding: 20px;
-    }
-
-    /* Min width 1200px to Max width 1399px */
-    @media only screen and (min-width: 1200px) and (max-width: 1399px) {
-      padding: 20px 8%;
-    }
-
-    /* Min width 1400px */
-    @media only screen and (min-width: 1400px) {
-      padding: 20px calc(18% + 18px);
-    }
+  .block--black {
+    background-color: black;
+    color: white;
   }
 
+  .block--white {
+    background-color: white;
+    color: black;
+  }
+
+  .block--pink--n--orange {
+    background-color: orangered;
+    background-image: linear-gradient(
+      to bottom,
+      rgb(100, 0, 100),
+      rgb(175, 15, 0)
+    );
+    // background-image: linear-gradient(to bottom, #BB3891, #F37121);
+    color: white;
+  }
+
+  .border--block {
+    border-top: 0.1px solid gray;
+  }
+}
+
+.padded--content {
+  /* Max width 767px */
+  @media only screen and (max-width: 767px) {
+    padding: 5px;
+  }
+
+  /* Min width 576px to Max width 767px */
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    padding: 10px;
+  }
+
+  /* Min width 768px to Max width 991px */
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    padding: 15px;
+  }
+
+  /* Min width 992px to Max width 1199px */
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    padding: 20px;
+  }
+
+  /* Min width 1200px to Max width 1399px */
+  @media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    padding: 20px 8%;
+  }
+
+  /* Min width 1400px */
+  @media only screen and (min-width: 1400px) {
+    padding: 20px calc(18% + 18px);
+  }
+}

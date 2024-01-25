@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, TemplateRef, ViewChild, inject } from '@angular/core';
+import { NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-header',
@@ -6,21 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-    protected modalOpen: boolean = false;
     public loggedInUser: object | null = null;
+    private offcanvasService = inject(NgbOffcanvas);
     constructor() {}
 
     async searchHandler(e: Event) {}
 
-    async openNavModal() {
-        this.toggleNavModal();
-    }
-
-    async closeNavModal() {
-        this.toggleNavModal();
-    }
-
-    async toggleNavModal() {
-        this.modalOpen = !this.modalOpen;
+    async openOffCanvas(content: TemplateRef<any>) {
+        this.offcanvasService.open(content, { position: 'top' });
     }
 }
