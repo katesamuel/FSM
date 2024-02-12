@@ -1,9 +1,12 @@
 .footer {
+  font-family: "Helvetica Neue";
+  -webkit-font-smoothing: antialiased;
+  
   .container-fluid {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     max-width: 100;
 
@@ -139,31 +142,26 @@
         /* Max width 767px */
       @media only screen and (max-width: 767px) {
         padding: calc(14px - 1%);
-        font-size: small;
       }
 
       /* Min width 768px to Max width 991px */
       @media only screen and (min-width: 768px) and (max-width: 991px) {
         padding: 0px 14px;
-        font-size: medium;
       }
 
       /* Min width 992px to Max width 1199px */
       @media only screen and (min-width: 992px) and (max-width: 1199px) {
         padding: 0px 16px;
-        font-size: medium;
       }
 
       /* Min width 1200px to Max width 1399px */
       @media only screen and (min-width: 1200px) and (max-width: 1399px) {
         padding: 0px 18px;
-        font-size: large;
       }
 
       /* Min width 1400px */
       @media only screen and (min-width: 1400px) {
         padding: 4px 20px;
-        font-size: large;
       }
       }
     }
@@ -172,6 +170,7 @@
   .container {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;

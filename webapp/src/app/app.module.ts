@@ -9,6 +9,7 @@ import { NgxScrollTopModule } from 'ngx-scrolltop';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BasketComponent } from './modules/basket/basket.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 const routes: Routes = [
@@ -57,6 +58,8 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     NgxScrollTopModule,
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,

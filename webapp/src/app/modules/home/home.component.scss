@@ -8,59 +8,50 @@
   }
 }
 
-.plato {
-  p {
-    font-size: 24px;
-    text-align: end;
-    line-height: 24px;
-    font-weight: 100;
-
-    span {
-      padding-right: 44px;
-    }
-  }
-}
-
-.home {
+.intro {
   display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
 
-  .music-is {
+  .heading h2 {
     text-transform: uppercase;
-    align-self: flex-start;
-    /* Max width 767px */
-    @media only screen and (max-width: 767px) {
-    }
+    font-weight: 100;
+    font-size: 60px;
+    padding: 20px;
+  }
+  .optional-design {
+    height: 50px;
 
-    /* Min width 576px to Max width 767px */
-    @media only screen and (min-width: 576px) and (max-width: 767px) {
-    }
-
-    /* Min width 768px to Max width 991px */
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
-    }
-
-    /* Min width 992px to Max width 1199px */
-    @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    }
-
-    /* Min width 1200px to Max width 1399px */
-    @media only screen and (min-width: 1200px) and (max-width: 1399px) {
-    }
-
-    /* Min width 1400px */
-    @media only screen and (min-width: 1400px) {
-      margin: 8px;
-      padding: 44px 0px;
-      width: 40%;
-      font-size: 75px;
-      line-height: 75px;
-      font-weight: 100;
+    img {
+      object-fit: contain;
     }
   }
 
-  .violinist {
-    padding: 120px 0px 75px 240px;
-    height: 240px;
+  .text p {
+    padding: 10px;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 100;
+  }
+
+  @media only screen and (max-width: 575px) {
+    
+  }
+
+  @media only screen and (min-width: 576px) and (max-width: 991px) {
+    
+  }
+
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    
+  }
+
+  @media only screen and (min-width: 1200px) and (max-width: 1399px) {
+   
+  }
+
+  @media only screen and (min-width: 1400px) {
+     
   }
 }
 
@@ -98,7 +89,7 @@
   .image-container {
     width: 70%;
     img {
-        width: 100%;
+      width: 100%;
     }
   }
 
@@ -109,8 +100,8 @@
     align-items: flex-start;
     justify-content: center;
     padding: 20px 40px 20px 40px;
-    font-weight: 300;
-    letter-spacing: 2px;
+    font-weight: 200;
+    letter-spacing: 1px;
 
     .heading {
       text-transform: uppercase;
@@ -233,150 +224,4 @@
   }
 }
 
-.events-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 60px 0px;
 
-  .image-container {
-    display: flex;
-    align-items: center;
-    img {
-      width: 32vw;
-    }
-  }
-
-  .text-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 20px 120px 20px 0px;
-    font-weight: 300;
-    letter-spacing: 2px;
-
-    .heading {
-      text-transform: uppercase;
-    }
-
-    .text {
-        font-size: 16px;
-    }
-
-    a {
-      padding: 12px 0px 4px 0px;
-      span {
-        text-transform: uppercase;
-        font-size: 13px;
-        font-weight: 400;
-        line-height: 16px;
-        letter-spacing: 2px;
-        display: inline-block;
-        position: relative;
-        text-decoration: none;
-        text-align: center;
-        padding: 4px 0px;
-        margin-right: 4px;
-      }
-      span::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        border-radius: 5px;
-        height: 0.05em;
-        bottom: 0;
-        left: 0;
-        background: black;
-        transform-origin: bottom right;
-        transition: transform 0.25s ease-out;
-      }
-      span:hover::after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-      }
-      i {
-        color: black;
-      }
-
-      span:hover + i {
-        display: none;
-      }
-    }
-
-    /* Max width 767px */
-    @media only screen and (max-width: 767px) {
-      .heading {
-        font-size: 32px;
-        line-height: 40px;
-      }
-
-      .text {
-        padding: 4px 0px;
-      }
-    }
-
-    /* Min width 576px to Max width 767px */
-    @media only screen and (min-width: 576px) and (max-width: 767px) {
-      .heading {
-        font-size: 32px;
-        line-height: 40px;
-      }
-
-      .text {
-        padding: 4px 0px;
-      }
-    }
-
-    /* Min width 768px to Max width 991px */
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
-      .heading {
-        font-size: 36px;
-        line-height: 42px;
-      }
-
-      .text {
-        padding: 4px 0px;
-      }
-    }
-
-    /* Min width 992px to Max width 1199px */
-    @media only screen and (min-width: 992px) and (max-width: 1199px) {
-      .heading {
-        font-size: 44px;
-        line-height: 48px;
-      }
-
-      .text {
-        padding: 8px 0px;
-      }
-    }
-
-    /* Min width 1200px to Max width 1399px */
-    @media only screen and (min-width: 1200px) and (max-width: 1399px) {
-      .heading {
-        font-size: 48px;
-        line-height: 52px;
-      }
-
-      .text {
-        padding-left: 12px 0px;
-      }
-    }
-
-    /* Min width 1400px */
-    @media only screen and (min-width: 1600px) {
-      padding-left: 120px;
-      .heading {
-        font-size: 48px;
-        line-height: 52px;
-        padding-bottom: 16px;
-      }
-
-      .text {
-        padding: 16px 0px;
-      }
-    }
-  }
-}

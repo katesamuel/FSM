@@ -25,26 +25,30 @@
         class="nav-item fa-solid fa-magnifying-glass"
         (click)="openOffCanvas(searchInput)"
       ></li>
-      <li
-        class="nav-item fa-solid fa-equals"
-      ></li>
+      <li class="nav-item fa-solid fa-equals"></li>
     </ul>
   </div>
 </nav>
 
 <ng-template #searchInput let-offcanvas>
-    <div class="search block--black">
-        <div class="search-input block--black">
-            <div class="search-input-label">enter your search</div>
-            <div class="search-cancel">
-                <i class="fa-solid fa-xmark" (click)="offcanvas.close('Close click')"></i>
-            </div>
-        </div>
-        <div class="search-input-text">
-            <div>
-                <input type="text" placeholder="What are you looking for?">
-            </div>
-        </div>
+  <div class="search block--black">
+    <div class="search-input block--black">
+      <div class="search-input-label">enter your search</div>
+      <div class="search-cancel">
+        <i
+          class="fa-solid fa-xmark"
+          (click)="offcanvas.close('Close click')"
+        ></i>
+      </div>
     </div>
-    
+      <div class="search-input-text">
+        <input
+          class="form-control input"
+          id="inputText"
+          placeholder="What are you looking for?"
+          type="text"
+        />
+        <i class="fas fa-search"></i>
+      </div>
+  </div>
 </ng-template>

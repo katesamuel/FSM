@@ -1,4 +1,4 @@
-import { Component, TemplateRef, ViewChild, inject } from '@angular/core';
+import { Component, TemplateRef, inject } from '@angular/core';
 import { NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -8,10 +8,10 @@ import { NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
 })
 export class HeaderComponent {
     public loggedInUser: object | null = null;
+    public searchText: string = '';
     private offcanvasService = inject(NgbOffcanvas);
-    constructor() {}
 
-    async searchHandler(e: Event) {}
+    constructor() { }
 
     async openOffCanvas(content: TemplateRef<any>) {
         this.offcanvasService.open(content, { position: 'top' });
